@@ -10,11 +10,11 @@
         <img (click)="takeCard()" class="top-card" style="right: 25px;" src="/assets/img/card_cover.png" alt="">
         
         <img *ngFor="let card of game.playedCard" class="played-card" src="/assets/img/{{ card }}.png" alt="">
-        <img (click)="takeCard()" *ngIf="pickCardAnimation"  class="pick-card" style="right: 25px;" src="/assets/img/{{ currentCard }}.png" alt="">
+        <img (click)="takeCard()" *ngIf="game.pickCardAnimation"  class="pick-card" style="right: 25px;" src="/assets/img/{{ game.currentCard }}.png" alt="">
     </div>
 
 </div>
-<app-game-info [card] = "currentCard" class="pin-info"></app-game-info>
+<app-game-info [card] = "game.currentCard" class="pin-info"></app-game-info>
 
 <button (click)="openDialog()" class="btn-add" mat-fab color="primary" aria-label="Example icon button with a delete icon">
     <mat-icon>add</mat-icon>

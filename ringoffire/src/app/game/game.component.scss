@@ -8,7 +8,7 @@
     background-size: 100%; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     
 }
 .bcg-img{
@@ -66,9 +66,25 @@
     }
 }
 
+@keyframes pick-card-animation-resp{
+    0%{
+        transform: scale(1) ;
+    }
+    40%{
+        transform: scale(1.15) ;
+    }
+    50%{
+        transform: scale(1.15) ;
+    }
+    100%{
+        transform: scale(1.1) translateX(0px) translateY(-250px) rotate(-10deg);
+    }
+}
+
 .player-position{
     position: absolute;
     right: 0;
+    z-index: 1;
 
 }
 
@@ -83,4 +99,46 @@
     bottom: 32px;
     left: 100px;
     right: 100px;
+}
+
+@media screen and (max-width:780px){
+    
+
+    .played-card{
+        right: 25px;
+        transform: scale(1.1) translateX(0px) translateY(-250px) rotate(-10deg);
+    }
+    
+    .pick-card{
+        transition: all 150ms ease-in-out;
+        animation: pick-card-animation-resp 1s ease-in-out;
+        transform: scale(1.1) translateX(0px) translateY(-250px) rotate(-10deg);
+    }
+
+    .pin-info{
+        left: 16px;
+        right: 100px;
+    }
+
+}
+
+
+@media screen and (max-width:330px){
+    
+    .card-stack{
+        left: 40px;
+    }
+
+}
+
+@media screen and (max-height:700px){
+    
+    .pin-info{
+        bottom: 4px;
+    }
+
+    .btn-add{
+        bottom: 4px;
+    }
+
 }

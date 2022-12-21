@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ringoffire-dea2d": {
+      "hosting": {
+        "ringoffire": [
+          "ringoffire-dea2d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ringoffire-dea2d"
+  }
+}
