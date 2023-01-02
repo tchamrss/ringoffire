@@ -1,4 +1,13 @@
 
+
+
+    .mat-card{
+        @media screen and (max-width:780px){
+            min-height: 150px;
+    }
+
+}
+
 @media screen and (max-width:400px){
 
     .mat-mdc-card-title{
